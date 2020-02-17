@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+	
+	<link rel="stylesheet" href="./layui/css/layui.css"  media="all">
+	<link rel="stylesheet" href="./css/index.css">	
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/font.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="./layui/layui.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+	
+	<style>
+		.layui-container {width: 100%;height: 100%;overflow: hidden}
+		.layui-col-md3 .layui-hide-xs .body-right{height: 100%;}
+	</style>
+
+</head>
+<body>
+    <!-- 顶部开始 -->
+    <div class="container">
+		<div class="left_open">
+		    <p><i title="展开左侧栏" class="iconfont">&#xe699;<a href="#" style="color: white;">菜单</a></i></p>
+		</div>
+        <div id="logo" class="logo"><a href="#">logo</a></div>
+        
+        <ul class="layui-nav left fast-add" lay-filter="">
+          <li class="layui-nav-item">
+            <a href="javascript:;">推荐导航</a>
+            <dl class="layui-nav-child"> 
+              <dd><a onclick="x_admin_show('资讯','#')"><i class="iconfont">&#xe6a2;</i>选项一</a></dd>
+              <dd><a onclick="x_admin_show('图片','#')"><i class="iconfont">&#xe6a8;</i>选项二</a></dd>
+               <dd><a onclick="x_admin_show('用户','#')"><i class="iconfont">&#xe6b8;</i>选项三</a></dd>
+            </dl>
+          </li>
+        </ul>
+		<ul class="layui-nav left fast-add" lay-filter="">
+		  <li class="layui-nav-item">
+		    <a href="javascript:;">推荐导航</a>
+		    <dl class="layui-nav-child"> 
+		      <dd><a onclick="x_admin_show('资讯','#')"><i class="iconfont">&#xe6a2;</i>选项一</a></dd>
+		      <dd><a onclick="x_admin_show('图片','#')"><i class="iconfont">&#xe6a8;</i>选项二</a></dd>
+		       <dd><a onclick="x_admin_show('用户','#')"><i class="iconfont">&#xe6b8;</i>选项三</a></dd>
+		    </dl>
+		  </li>
+		</ul>
+        <ul class="layui-nav right" lay-filter="">
+		  <li class="layui-nav-item">
+			  <span class="fly-search"><i class="layui-icon"></i></span>
+		  </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;">登陆后</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+              <dd><a onclick="x_admin_show('资讯','#')"><i class="iconfont">&#xe6a2;</i>个人信息</a></dd>
+              <dd><a onclick="x_admin_show('图片','#')"><i class="iconfont">&#xe6a8;</i>切换账号</a></dd>
+              <dd><a href="#"><i class="iconfont">&#xe6a2;</i>退出</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item to-index"><a href="#">前台首页</a></li>
+        </ul>
+        
+    </div>
+    <!-- 顶部结束 -->
+
+     <!-- 左侧菜单开始 -->
+    <div class="left-nav">
+      <div id="side-nav">
+        <ul id="nav">
+             <li >
+                <a href="javascript:;">
+                    <i class="iconfont">&#xe6eb;</i>
+                    <cite>一级菜单</cite>
+                    <i class="iconfont nav_right">&#xe6a7;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li> <a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                </ul>
+            </li>
+             <li >
+                <a href="javascript:;">
+                    <i class="iconfont">&#xe6e4;</i>
+                    <cite>基本元素</cite>
+                    <i class="iconfont nav_right">&#xe6a7;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li> <a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                </ul>
+            </li>
+            
+            
+            <li>
+                <a href="javascript:;"><i class="iconfont">&#xe6f6;</i><cite>一级菜单</cite><i class="iconfont nav_right">&#xe6a7;</i></a>
+                <ul class="sub-menu">
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li> <a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                </ul>
+            </li>
+             <li >
+                <a href="javascript:;">
+                    <i class="iconfont">&#xe6b4;</i>
+                    <cite>一级菜单</cite>
+                    <i class="iconfont nav_right">&#xe6a7;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li> <a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                </ul>
+            </li>
+                   
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont">&#xe69e;</i>
+                    <cite>一级菜单</cite>
+                    <i class="iconfont nav_right">&#xe6a7;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li> <a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont">&#xe726;</i>
+                    <cite>管理员管理</cite>
+                    <i class="iconfont nav_right">&#xe6a7;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="html/admin-list.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>管理员列表</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="html/admin-role.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>角色管理</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="html/admin-cate.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>权限分类</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="html/admin-rule.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>权限管理</cite>
+                        </a>
+                    </li >
+                </ul>
+            </li>            
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont">&#xe6b8;</i>
+                    <cite>用户管理</cite>
+                    <i class="iconfont nav_right">&#xe6a7;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="html/member-list.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>会员列表</cite>
+                            
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="html/member-del.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>会员删除</cite>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="iconfont">&#xe70b;</i>
+                            <cite>会员管理</cite>
+                            <i class="iconfont nav_right">&#xe6a7;</i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a _href="html/member-del.html">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>会员列表</cite>
+                                    
+                                </a>
+                            </li >
+                            <li>
+                                <a _href="html/member-del.html">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>会员删除</cite>
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </li>             
+<li>
+                <a href="javascript:;">
+                    <i class="iconfont">&#xe6ae;</i>
+                    <cite>一级菜单</cite>
+                    <i class="iconfont nav_right">&#xe6a7;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li> <a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                    <li><a _href="#"><i class="iconfont">&#xe6a7;</i><cite>二级菜单</cite></a></li>
+                </ul>
+            </li>
+		</ul>
+      </div>
+    </div>
+    <!-- <div class="x-slide_left"></div> -->
+    <!-- 左侧菜单结束 -->
+	
+    <!-- 右侧主体开始 -->
+    <div class="page-content">
+        <div class="fly-panel fly-column">
+          <div class="layui-container">
+            <ul class="layui-clear">
+              <!-- <li class="layui-hide-xs layui-this"><a href="/">首页</a></li> -->
+              <li><a href="#">导航</a></li> 
+              <!-- <li><a href="#">第二导航<span class="layui-badge-dot"></span></a></li> -->
+              <li><a href="#">导航</a></li> 
+			  <li><a href="#">导航</a></li> 
+              <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> 
+              
+              <!-- 用户登入后显示 -->
+              <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="#">我发表的贴</a></li> 
+              <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="#">我收藏的贴</a></li> -->
+            </ul> 
+            
+            <div class="fly-column-right layui-hide-xs"> 
+              <a href="#" class="layui-btn">控制台</a> 
+            </div> 
+            <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;"> 
+              <a href="#" class="layui-btn">控制台</a> 
+            </div> 
+          </div>
+        </div>
+        <!--右侧内容部分-->
+        <div class="layui-container">
+          <div class="fly-panel layui-col-md12" style="padding: 20px;">
+              
+            <div>
+				<h3>反馈须知：如果您发现在xxx中有对任何企业或者个人名誉的恶意诋毁、人身攻击等内容时，请在此反馈</h3>
+				</br>
+			</div>
+			<div>
+				<form class="layui-form">
+					<span style="color: red; float: left;">*</span><p>本人身份：</p>
+					<div class="layui-form-item">
+					    <div class="layui-input-block">
+					      <input type="radio" name="sex" value="企业" title="企业" checked="">
+					      <input type="radio" name="sex" value="个人" title="个人">
+					    </div>
+					  </div>
+					  </br>
+					  
+					 <span style="color: red; float: left;">*</span><p>反馈连接：</p> 
+					 <div class="layui-form-item">
+					     <div class="layui-input-block">
+					           <input type="text" name="username" lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？" placeholder="请输入" autocomplete="off" class="layui-input">
+					     </div>
+					 </div>
+					 </br>
+					 
+					 <span style="color: red; float: left;">*</span><p>问题描述：</p> 
+					 <div class="layui-form-item layui-form-text">
+					     <div class="layui-input-block">
+					       <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+					     </div>
+					   </div>
+					   </br>
+					   
+					 <p>上传图片：</p> 
+					 <br>
+					 <div class="layui-form-item">
+						 <div class="layui-upload">
+						   <button type="button" class="layui-btn" id="test2">多图片上传</button> 
+						   <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+						     预览图：
+						     <div class="layui-upload-list" id="demo2"></div>
+						  </blockquote>
+						 </div>
+					 </div>
+					 </br>
+					 
+					 <span style="color: red; float: left;">*</span><p>联系邮箱：</p> 
+					 <div class="layui-input-block">
+					       <input type="text" name="username" lay-verify="required" lay-reqtext="用户名是必填项，岂能为空？" placeholder="请输入" autocomplete="off" class="layui-input">
+					 </div>
+					 </br>
+					 
+					     <button type="button" class="layui-btn">提交</button>
+				</form>
+			</div>
+          </div>
+		  
+        </div>
+        
+		<div class="fly-footer ">
+		 <!-- sm\xs隐藏 -->
+		   <div style="margin:0px" class="fly-panel  layui-col-md12">       
+		     <div class="layui-col-md12 layui-hide-md layui-hide-sm">
+				 <div class="layui-collapse" lay-filter="test">
+				   <div class="layui-colla-item">
+				     <h2 class="layui-colla-title">公告</h2>
+				     <div class="layui-colla-content">
+				       <p><a href="#">公告一</a></p>
+				       <p><a href="#">公告二</a></p>
+				       <p><a href="#">公告三</a></p>
+				     </div>
+				   </div>
+				   <div class="layui-colla-item">
+				     <h2 class="layui-colla-title">关于我们</h2>
+				     <div class="layui-colla-content">
+				       <p><a href="#">客服电话（111-111-111）</a></p>
+				       <p><a href="#">售前电话（111-111-111）</a></p>
+				       <p><a href="#">备案帮助（111-111-111）</a></p>
+					   <p><a href="#">意见反馈</a></p>
+				     </div>
+				   </div>
+				   <div class="layui-colla-item">
+				     <h2 class="layui-colla-title">帮助文档</h2>
+				     <div class="layui-colla-content">
+				       <p><a href="#">入门指南</a></p>
+				       <p><a href="#">产品文档</a></p>
+				       <p><a href="#">备案帮助</a></p>
+				     </div>
+				   </div>
+				 </div>
+				 <!-- <div><button type="text" class="layui-btn layui-btn-primary" style="width: 100%;">微信	QQ  微博 </button></div>
+				 <div><button type="text" class="layui-btn layui-btn-primary" style="width: 100%;">二维码</button></div>
+				 <div><button type="text" class="layui-btn layui-btn-primary" style="width: 100%;">联系我们 </button></div>
+				 <div><button type="text" class="layui-btn layui-btn-primary" style="width: 100%;">公安备案</button></div> -->
+				 <div class="layui-col-md12 layui-col-sm12 footer-record">
+				 	<p>许可证号：1111-1111-1111</p>
+				 	<p>公安备案</p>
+				 </div>
+		     </div>
+		        
+		     <div class="layui-col-md12 layui-hide-xs">
+		      <div class="layui-col-md4 layui-col-sm4">
+				  <ul>
+				      <li><i class="iconfont" style="color: #009688;">&#xe6f6;</i><a class="" href="#" style="font-size: 20px;font-weight: bold;">公告</a></li>
+				      <li><a class="" href="#">公告一</a></li>
+				      <li><a class="" href="#">公告二</a></li>
+					  <li><a class="" href="#">公告三</a></li>
+				  </ul>
+			  </div>
+			  <div class="layui-col-md4 layui-col-sm4">
+				<ul>
+				    <li><i class="iconfont" style="color: #009688;">&#xe6f6;</i><a class="" href="#" style="font-size: 20px;font-weight: bold;">关于我们</a></li>
+				    <li><a class="" href="#">客服电话（111-111-111）</a></li>
+				    <li><a class="" href="#">售前电话（111-111-111）</a></li>
+					<li><a class="" href="#">备案帮助</a></li>
+					<li><a class="" href="feedback.html">意见反馈</a></li>
+				</ul>
+			  </div>
+			  <div class="layui-col-md4 layui-col-sm4">
+				  <ul>
+				      <li><i class="iconfont" style="color: #009688;">&#xe6f6;</i><a class="" href="#" style="font-size: 20px;font-weight: bold;">帮助文档</a></li>
+				      <li><a class="" href="#">入门指南</a></li>
+				      <li><a class="" href="#">产品文档</a></li>
+				  	  <li><a class="" href="">备案帮助</a></li>
+				  </ul>
+			  </div>
+			  <hr>
+			  <div class="layui-col-md12 layui-col-sm12 footer-record">
+				<p>许可证号：1111-1111-1111</p>
+			  	<p>公安备案</p>
+			  </div>
+		     </div>
+		   </div>
+		 </div>     
+    </div>
+	
+    <!-- <div class="page-content-bg"></div> -->
+    <!-- 右侧主体结束 -->
+    <!-- 中部结束 -->
+    <!-- 底部开始 -->
+    <!-- <div class="footer">
+		
+        <div class="copyright">Copyright ©2019 L-admin v2.3 All Rights Reserved</div>  
+    </div> -->
+    <!-- 底部结束 -->
+</body>
+<script>
+  /*************************导航**********************************/
+  layui.use('element', function(){
+  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+  </script>
+</html>
