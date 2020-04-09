@@ -1,0 +1,105 @@
+{
+  "clearInfo": {
+    "clearUrl": "api/clear.json"
+  },
+  "homeInfo": {
+    "title": "个人中心",
+    "icon": "fa fa-home",
+    "href": "page/个人中心/个人信息.html?mpi=m-p-i-0"
+  },
+  "logoInfo": {
+    "title": "盛源行",
+    "image": "",
+    "href": "首页.html"
+  },
+ 
+  "menuInfo": {
+    "currency": {
+      "title": "个人中心",
+      "icon": "fa fa-address-book",
+      "child": [
+        {
+          "title": "个人信息",
+          "href": "page/个人中心/个人信息.html",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+		{
+			"title": "已有服务",
+			"href": "page/产品服务/产品与服务.html",
+			"icon": "fa fa-file-text",
+			"target": "_self"
+		},
+        {
+          "title": "发票管理",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "申请发票",
+              "href": "page/发票管理/申请发票.html",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "发票记录",
+              "href": "page/发票管理/发票记录.html",
+              "icon": "fa fa-file-text",
+              "target": "_self"
+            },
+  
+            {
+              "title": "增票资质管理",
+              "href": "page/发票管理/增票资质管理.html",
+              "icon": "fa fa-file-text",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "充值管理",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "充值",
+              "href": "page/充值管理/充值.html",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "充值记录",
+              "href": "page/充值管理/充值记录.html",
+              "icon": "fa fa-file-text",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "缴费情况",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "项目管理",
+              "href": "page/缴费情况/项目管理.html",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "缴费记录",
+              "href": "page/缴费情况/缴费情况.html",
+              "icon": "fa fa-file-text",
+              "target": "_self"
+            }
+          ]
+        }
+      
+       
+      ]
+    }
+  }
+}
