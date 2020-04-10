@@ -17,41 +17,41 @@
 <body>
 <div class="layui-form layuimini-form">
     <div class="layui-form-item">
-        <label class="layui-form-label required">信息</label>
+        <label class="layui-form-label required">真实名字</label>
         <div class="layui-input-block">
-            <input type="text" name="username" lay-verify="required" lay-reqtext="信息不能为空" placeholder="信息" value="" class="layui-input">
-            <tip>信息表单。</tip>
+            <input type="text" name="username" lay-verify="required" lay-reqtext="信息" placeholder="请输入真实名字" value="王五" class="layui-input">
+            <!-- <tip>数据表单</tip> -->
         </div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label required">单选信息</label>
+        <label class="layui-form-label required">登录名</label>
         <div class="layui-input-block">
-            <input type="radio" name="sex" value="1" title="信息" checked="">
-            <input type="radio" name="sex" value="2" title="信息">
+            <input type="text" name="username" lay-verify="required" lay-reqtext="信息" placeholder="请设置登录名" value="syh" class="layui-input">
+            <!-- <tip>数据表单</tip> -->
         </div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label required">信息</label>
+        <label class="layui-form-label">登录密码</label>
         <div class="layui-input-block">
-            <input type="number" name="phone" lay-verify="required" lay-reqtext="信息不能为空" placeholder="信息" value="" class="layui-input">
+            <input type="email" name="email" placeholder="请输入登录密码" value="123456789" class="layui-input">
         </div>
     </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">信息</label>
-        <div class="layui-input-block">
-            <input type="email" name="email" placeholder="信息" value="" class="layui-input">
-        </div>
+
+     <div class="layui-form-item">
+    <label class="layui-form-label">权限等级</label>
+    <div class="layui-input-block">
+        <select name="interest" lay-filter="aihao">
+        <option value="">请设置权限等级</option>
+        <option value="超级管理员" selected="">超级管理员</option>
+        <option value="">平台管理员</option>
+        <option value="">财务管理员</option>
+      </select>
     </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">信息</label>
-        <div class="layui-input-block">
-            <input type="text" name="work" placeholder="信息" value="" class="layui-input">
-        </div>
-    </div>
+     </div>
     <div class="layui-form-item layui-form-text">
         <label class="layui-form-label">备注信息</label>
         <div class="layui-input-block">
-            <textarea name="remark" class="layui-textarea" placeholder="信息"></textarea>
+            <textarea name="remark" class="layui-textarea" placeholder="请输入备注信息数据"></textarea>
         </div>
     </div>
 
@@ -60,7 +60,6 @@
             <button class="layui-btn" lay-submit lay-filter="saveBtn">确认保存</button>
         </div>
     </div>
-</div>
 </div>
 <script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
 <script>

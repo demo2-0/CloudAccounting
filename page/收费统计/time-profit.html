@@ -9,6 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
   <link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.mobile.css" media="all">
+  <link rel="stylesheet" href="./../../lib/layuiadmin/style/admin.css" media="all">
+  <link rel="stylesheet" href="../../lib/xadmin/css/xadmin.css">
+  <script type="text/javascript" src="./../../lib/xadmin/js/xadmin.js"></script>
+  <link rel="stylesheet" href="./../../css/public.css" media="all">
 
   <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 
@@ -33,79 +37,47 @@
 
 <body>
 
-
   <!--主体-->
-  <div class="layui-container">
-    <div class="body_top">
-      <div class="layui-col-md4 layui-col-xs12 layui-col-md-offset1">
-
-        <form class="layui-form" action="">
-          <!--年份选择-->
-          <div class="layui-inline">
-            <label class="layui-form-label">选择年份</label>
-            <div class="layui-input-inline">
-              <select name="modules" lay-verify="required" lay-search="">
-                <option value="">请选择年份</option>
-                <option value="1">2020年</option>
-                <option value="2">2021年</option>
-                <option value="3">2022年</option>
-                <option value="4">2023年</option>
-                <option value="5">2024年</option>
-                <option value="6">2025年</option>
-                <option value="7">2026年</option>
-                <option value="8">2027年</option>
-                <option value="9">2028年</option>
-                <option value="10">2029年</option>
-                <option value="11">2030年</option>
-                <option value="12">2031年</option>
-                <option value="13">2032年</option>
-                <option value="14">2033年</option>
-                <option value="15">2034年</option>
-                <option value="16">2035年</option>
-                <option value="17">2036年</option>
-                <option value="18">2037年</option>
-                <option value="19">2038年</option>
-                <option value="20">2039年</option>
-              </select>
+  <div class="layuimini-container">
+    <div class="layuimini-main">
+      <fieldset class="table-search-fieldset">
+        <legend>统计信息</legend>
+        <div style="margin: 10px 10px 10px 10px">
+          <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+              <div class="layui-inline">
+                <label class="layui-form-label">开始时间</label>
+                <div class="layui-input-inline">
+                  <input type="text" class="layui-input" name="" id="test7" placeholder="-">
+                </div>
+              </div>
+              <div class="layui-inline">
+                <label class="layui-form-label">结束时间</label>
+                <div class="layui-input-inline">
+                  <input type="text" class="layui-input" name="" id="test6" placeholder="-">
+                </div>
+              </div>
+              <div class="layui-inline">
+                <button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="data-search-btn"><i
+                    class="layui-icon"></i>统计</button>
+              </div>
             </div>
-          </div>
-
-        </form>
-      </div>
-      <!--月份选择-->
-      <div class="layui-col-md4 layui-col-xs12 layui-col-space2">
-        <form class="layui-form" action="">
-          <div class="layui-inline">
-            <label class="layui-form-label">选择月份</label>
-            <div class="layui-input-inline">
-              <select name="modules" lay-verify="required" lay-search="">
-                <option value="">请选择月份</option>
-                <option value="1">1月</option>
-                <option value="2">2月</option>
-                <option value="3">3月</option>
-                <option value="4">4月</option>
-                <option value="5">5月</option>
-                <option value="6">6月</option>
-                <option value="7">7月</option>
-                <option value="8">8月</option>
-                <option value="9">9月</option>
-                <option value="10">10月</option>
-                <option value="11">11月</option>
-                <option value="12">12月</option>
-              </select>
-            </div>
-          </div>
-      </div>
-      </form>
-    </div>
-
-    <!--按钮-->
-    <div class="layui-col-md1 layui-col-xs12">
-      <button type="button" class="layui-btn layui-btn-normal btn_size">统计</button>
+        </div>
+      </fieldset>
     </div>
   </div>
-  <!--表格-->
-  <div class="layui-row layui-col-md-offset3">
+
+  </div>
+
+
+  <!--图表-->
+  <div class="layui-form layui-border-box layui-table-view">
+    <div class=" layui-row layui-col-md-offset2" style="margin-top: 2%;">
+      <div class="layui-col-md3" id="main" style="width: 400px;height:240px;"></div>
+      <div class="layui-col-md3" id="main2" style="width: 400px;height:240px;"></div>
+    </div>
+      <!--表格-->
+  <div class="layui-row layui-col-md-offset3" style="margin-top: 2%;">
     <table class="layui-table table_css " style="text-align: center;">
       <colgroup>
         <col width="30">
@@ -145,29 +117,142 @@
           <td>2000</td>
           <td>2020-1-1</td>
         </tr>
-		<tr>
-		  <td>4</td>
-		  <td>马云</td>
-		  <td>云直播</td>
-		  <td>5000</td>
-		  <td>2020-1-5</td>
-		</tr>
-
+        <tr>
+          <td>4</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+      <!-- 
+        <tr>
+          <td>16</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>马云</td>
+          <td>云直播</td>
+          <td>5000</td>
+          <td>2020-1-5</td>
+        </tr> -->
       </tbody>
+      
     </table>
+     <!--分页-->
+     <div class="layui-row layui-col-md" style="text-align: left">
+      <div id="demo5"></div>
+    </div>
   </div>
-  <!--分页-->
-  <div class="layui-row layui-col-md-offset5" style="width: 600px;">
-    <div id="demo5"></div>
-  </div>
-
+     
   </div>
   
-  <!--图表-->
-  <div class=" layui-row layui-col-md-offset2" style="margin-top: 2%;;">
-    <div class="layui-col-md3" id="main" style="width: 400px;height:240px;"></div>
-    <div class="layui-col-md3" id="main2" style="width: 400px;height:240px;"></div>
+ 
+
   </div>
+
+
   </div>
 
 
@@ -189,10 +274,10 @@
 
       //日期
       laydate.render({
-        elem: '#date'
+        elem: '#test6'
       });
       laydate.render({
-        elem: '#date1'
+        elem: '#test7'
       });
 
       //创建一个编辑器

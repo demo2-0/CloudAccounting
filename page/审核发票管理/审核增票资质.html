@@ -65,6 +65,8 @@
                                         <div class="layui-form-item">
                                             <label class="layui-form-label">附件:</label>
                                             <button type="button"class="layui-btn" id="test" >查看附件</button>
+                                            <a class="layui-btn  layui-btn-danger data-count-delete" href="/images/发票.jpg" download="附件1">下载附件1</a>
+                                            <a class="layui-btn  layui-btn-danger data-count-delete" href="/images/发票.jpg" download="附件2">下载附件2</a>
                                         </div>
                                         <!-- </div>  -->
                                         <div class="layui-form-item">
@@ -115,6 +117,7 @@
                         photos: json //格式见API文档手册页
                         , anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机
                         , closeBth: 0
+                        ,
                     });
                 });
             });

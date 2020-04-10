@@ -38,8 +38,8 @@
 
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-sm data-add-btn"> 添加用户 </button>
-                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn"> 删除用户 </button>
+                <button class="layui-btn layui-btn-sm data-add-btn"> 添加推广渠道 </button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn"> 删除推广渠道 </button>
             </div>
         </script>
 
@@ -106,13 +106,13 @@
         $(".data-add-btn").on("click", function () {
 
             var index = layer.open({
-                title: '添加用户',
+                title: '添加推广渠道',
                 type: 2,
                 shade: 0.2,
                 maxmin:true,
                 shadeClose: true,
                 area: ['100%', '100%'],
-                content: '../table/add.html',
+                content: '../table/add_Popularizes.html',
             });
             $(window).on("resize", function () {
                 layer.full(index);
@@ -144,7 +144,7 @@
                     maxmin:true,
                     shadeClose: true,
                     area: ['100%', '100%'],
-                    content: '../table/edit.html',
+                    content: '../table/edit_Popularizes.html',
                 });
                 $(window).on("resize", function () {
                     layer.full(index);

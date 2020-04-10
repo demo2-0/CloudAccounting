@@ -38,8 +38,8 @@
 
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-sm data-add-btn"> 添加用户 </button>
-                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn"> 删除用户 </button>
+                <button class="layui-btn layui-btn-sm data-add-btn"> 添加问题反馈 </button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn"> 删除问题反馈 </button>
             </div>
         </script>
 
@@ -107,13 +107,13 @@
         $(".data-add-btn").on("click", function () {
 
             var index = layer.open({
-                title: '添加用户',
+                title: '添加问题反馈',
                 type: 2,
                 shade: 0.2,
                 maxmin:true,
                 shadeClose: true,
                 area: ['100%', '100%'],
-                content: '../table/add.html',
+                content: '../table/add_Product_problems.html',
             });
             $(window).on("resize", function () {
                 layer.full(index);
@@ -139,13 +139,13 @@
             if (obj.event === 'edit') {
 
                 var index = layer.open({
-                    title: '编辑用户',
+                    title: '编辑问题反馈',
                     type: 2,
                     shade: 0.2,
                     maxmin:true,
                     shadeClose: true,
                     area: ['100%', '100%'],
-                    content: '../table/edit.html',
+                    content: '../table/edit_Product_problems.html',
                 });
                 $(window).on("resize", function () {
                     layer.full(index);

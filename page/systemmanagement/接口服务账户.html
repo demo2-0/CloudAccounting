@@ -81,11 +81,11 @@
                 icon: 'layui-icon-tips'
             }],
             cols: [[
-                {type: "checkbox", width: 50, fixed: "left"},
-                {field: 'id', width: 70, title: '序号', sort: true},
-                {field: 'name', width: 180, title: '账户名称'},
-                {field: 'servicecode', width: 100, title: '服务码'},
-                {field: 'interfacepsw', width: 150, title: '调用接口密码'},
+                {type: "checkbox", fixed: "left"},
+                {field: 'id', title: '序号', sort: true},
+                {field: 'name', title: '账户名称'},
+                {field: 'servicecode',  title: '服务码'},
+                {field: 'interfacepsw', title: '调用接口密码'},
                 {field: 'info', minWidth: 180, title: '详细信息'},
                 {title: '操作', minWidth: 50, templet: '#currentTableBar', fixed: "right", align: "center"}
 
@@ -125,7 +125,7 @@
                 maxmin:true,
                 shadeClose: true,
                 area: ['100%', '100%'],
-                content: '../table/add.html',
+                content: '../table/add_interface_service.html',
             });
             $(window).on("resize", function () {
                 layer.full(index);
@@ -157,7 +157,7 @@
                     maxmin:true,
                     shadeClose: true,
                     area: ['100%', '100%'],
-                    content: '../table/edit.html',
+                    content: '../table/edit_interface_service.html',
                 });
                 $(window).on("resize", function () {
                     layer.full(index);

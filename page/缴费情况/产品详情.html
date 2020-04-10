@@ -69,6 +69,13 @@
             </tbody>
           </table>
         </div>
+        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用" class="layui-btn ">
+          <e>续费</e>
+        </a>
+        <a onclick="member_open(this,'10001')" href="javascript:;" title="启用" class="layui-btn ">
+          <e>充值</e>
+        </a>
+      
       </fieldset>
     </div>
   </div>
@@ -78,14 +85,32 @@
 
 
 
+
   <script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
   <script>
-    layui.use(['form', 'table'], function () {
+    layui.use('layer', 'table', 'from', function () {
       var $ = layui.jquery,
-        form = layui.form,
+        layer = layui.layer,
         table = layui.table,
-        layuimini = layui.layuimini;
+        from = layui.from;
+
+
     });
+    function member_open(obj, id) {
+    layer.open({
+            type: 2,
+            btn:["返回"],
+            area: ['80%', '95%'],
+            content: './../../page/充值管理/Recharge.html' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+          });
+        }
+    function member_stop(obj, id) {
+      layer.confirm('确认续费么', function (index) {
+        layer.msg('续费成功', { icon: 1 });
+      });
+
+    }
+
   </script>
 </body>
 

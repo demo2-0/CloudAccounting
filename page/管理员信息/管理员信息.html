@@ -3,19 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>管理员信息</title>
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
         content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-    <link rel="stylesheet" href="./../../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="./../../lib/layui-v2.5.5/css/layui.css" media="all">
     <link rel="stylesheet" href="./../../css/index.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./../../css/font.css">
     <script type="text/javascript" src="./../../js/jquery.min.js"></script>
-    <script type="text/javascript" src="./../../layui/layui.js"></script>
+    <script type="text/javascript" src="./../../lib/layui-v2.5.5/layui.js"></script>
     <script type="text/javascript" src="./../../js/index.js"></script>
     <link rel="stylesheet" href="./../../css/layuiadmin.css" media="all">
     <link rel="stylesheet" href="./../../css/admin.css" media="all">
@@ -205,20 +204,19 @@
                                 <h4 class="layadmin-homepage-font">莫忧</h4>
                             </div>
                             <div class="layadmin-homepage-pad-ver" style="text-align: center;">
-                                <a onclick="x_admin_show('更换头像','headSculpture.html')" class="layui-icon ">更换头像</a>
+                                <a onclick="headSculptyre(this,'10001')" href="javascript:;" title="更换头像"
+                                    class="layui-icon ">更换头像</a>
 
                             </div>
                         </div>
                         <div class="layadmin-homepage-pad-ver" style="text-align: center;">
-                            <a onclick="x_admin_show('修改个人信息','edit.html')" class="layui-icon ">修改个人信息</a>
+                            <a onclick="edit(this,'10001')" href="javascript:;" title="修改个人资料"
+                                class="layui-icon ">修改个人资料</a>
 
                         </div>
                         <div class="layadmin-homepage-pad-ver" style="text-align: center;">
-                            <a onclick="x_admin_show('子账户管理','子账户管理.html')" class="layui-icon ">子账户管理</a>
-
-                        </div>
-                        <div class="layadmin-homepage-pad-ver" style="text-align: center;">
-                            <a onclick="x_admin_show('修改密码','password.html')" class="layui-icon ">修改密码</a>
+                            <a onclick="passwords(this,'10001')" href="javascript:;" title="修改密码"
+                                class="layui-icon ">修改密码</a>
 
                         </div>
                     </div>
@@ -229,7 +227,7 @@
                             <div class="layui-col-md9">
                                 <div class="grid-demo">
                                     <div class="panel-body layadmin-homepage-shadow">
-                                        <div class="layui-card-header"><i class="fa fa-warning icon"></i>个人信息</div>
+                                        <div class="layui-card-header"><i class="fa fa-warning icon"></i></div>
                                         <div class="layui-col-xs6" style="height: 310px;">
                                             <div class="panel layui-bg-number">
                                                 <div class="panel-body">
@@ -259,37 +257,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- <div class="panel-body layadmin-homepage-shadow">
-                                            <div class="layui-card-header">
-                                                <label>我的账户</label>
-                                                <button class="layui-btn layui-btn-primary " style="float: right;"><a
-                                                        href="./../../page/充值管理/充值.html">在线充值</a></button>
-                                                <button class="layui-btn layui-btn-primary " style="float: right;"> <a
-                                                        href="./../../page/充值管理/充值记录.html">充值记录</a></button>
-                                            </div>
-                                            <div class="layui-card-body">
-                                                <div class="layui-row layui-col-space5">
-                                                    <div class="layui-col-xs9 layui-col-md9 top-panel-number">
-                                                        <h2>可用余额<h2>
-                                                                <h1>9,054,056</h1>
-                                                                <a class="layui-btn layui-btn-normal"
-                                                                    style="margin-top: 30px;" href="提现.html">提现</a>
-                                                                <a class="layui-btn layui-btn-primary"
-                                                                    style="margin-top: 30px;" href="提现记录.html">提现记录</a>
-                                                    </div> -->
-                                                    <!-- <div class=" layui-btn"   style="margin-top: 10%;">
-                                                            <a href="./../../page/充值管理/充值.html">在线充值</a>
-                                
-                                                        </div>
-                                                        <div class=" layui-btn layui-btn-primary "
-                                                            style="margin-top: 10%;">
-                                                            <a href="./../../page/充值管理/充值记录.html">充值记录</a>
-                                                        </div> -->
-
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -299,7 +266,40 @@
             </div>
         </div>
     </div>
-    </div>
     </script>
+    <script>
+        //修改头像
+        function headSculptyre(obj, id) {
+            layer.open({
+                type: 2,
+                title: '修改头像',
+                btn: ["关闭"],
+                area: ['100%', '100%'],
+                content: 'headSculpture.html' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            });
+        }
+        //修改个人资料
+        function edit(obj, id) {
+            layer.open({
+                type: 2,
+                title: '修改个人资料',
+                btn: ["关闭"],
+                area: ['100%', '100%'],
+                content: 'edit.html' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            });
+        }
+
+        //修改密码
+        function passwords(obj, id) {
+            layer.open({
+                type: 2,
+                title: '子账户管理',
+                btn: ["关闭"],
+                area: ['100%', '100%'],
+                content: 'password.html' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            });
+        }
+    </script>
+
 
 </html>

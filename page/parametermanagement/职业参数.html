@@ -38,8 +38,8 @@
 
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-sm data-add-btn"> 添加用户 </button>
-                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn"> 删除用户 </button>
+                <button class="layui-btn layui-btn-sm data-add-btn"> 添加职业参数</button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn"> 删除职业参数 </button>
             </div>
         </script>
 
@@ -113,7 +113,7 @@
                 maxmin:true,
                 shadeClose: true,
                 area: ['100%', '100%'],
-                content: '../table/add.html',
+                content: '../table/add_Occupation.html',
             });
             $(window).on("resize", function () {
                 layer.full(index);
@@ -145,7 +145,7 @@
                     maxmin:true,
                     shadeClose: true,
                     area: ['100%', '100%'],
-                    content: '../table/edit.html',
+                    content: '../table/edit_Occupation.html',
                 });
                 $(window).on("resize", function () {
                     layer.full(index);

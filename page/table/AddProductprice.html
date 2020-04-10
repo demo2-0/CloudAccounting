@@ -53,6 +53,12 @@
             <input type="number" name="phone" lay-verify="required" lay-reqtext="不能为空" placeholder="" value="" class="layui-input">
         </div>
     </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="saveBtn">确认保存</button>
+			<input  type="button" class="layui-btn"  value="返回" onclick="javascript:history.go(-1);"/>
+        </div>
+    </div>
    <br />
 <script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
 <script>
